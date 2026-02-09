@@ -1,10 +1,13 @@
-
 import AppRouting from "./routing/AppRouting";
+import {Provider} from "react-redux";
+import appStore from "./utils/appStore";
 
 function App() {
   return (
     <div>
-      <AppRouting />
+      <Provider store={appStore}>
+        <AppRouting />
+      </Provider>
     </div>
   );
 }

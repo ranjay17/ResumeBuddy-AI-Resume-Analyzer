@@ -1,6 +1,7 @@
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Home from "../components/Home";
 import Analyzer from "../components/Analyzer";
+import Feedback from "../components/Feedback";
 
 const AppRouting = () =>{
     const appRouter = createBrowserRouter([
@@ -12,6 +13,10 @@ const AppRouting = () =>{
             path: '/analyzer',
             element: <Analyzer />
         },
+        {
+            path: '/feedback',
+            element: <Feedback />
+        }
     ])
     return <RouterProvider router={appRouter} />
 }
