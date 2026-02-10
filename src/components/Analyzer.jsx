@@ -43,7 +43,8 @@ const Analyzer = () => {
       setLoading(false)
       navigate("/feedback");
     } catch (error) {
-      alert("Something went wrong. Please try again later.",error.message);
+      alert("Something went wrong. Please try again later.",error);
+      console.log(error)
     }
     
   };
