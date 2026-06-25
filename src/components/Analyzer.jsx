@@ -33,7 +33,7 @@ const Analyzer = () => {
       const jdValue = jdText.current.value;
       const aiPrompt = Prompt(resumeText, jdValue);
       const response = await genAi.models.generateContent({
-        model: "gemini-2.5-flash-lite",
+        model: "gemini-2.5-flash",
         contents: aiPrompt,
       });
       const aiFeedback = response.candidates[0].content.parts[0].text;
@@ -44,7 +44,7 @@ const Analyzer = () => {
       navigate("/feedback");
     } catch (error) {
       alert("Something went wrong. Please try again later.",error);
-      console.log(error)
+      setLoading(false)
     }
     
   };
